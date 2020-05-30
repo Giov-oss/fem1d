@@ -2,3 +2,17 @@ a.exe
 data/elmnts.dat
 data/nods.dat
 data/res.dat
+data.mod
+data.o
+ecenergia.mod
+energia.o
+elemental.mod
+melem.o
+mesh.mod
+mesh.o
+plot.mod
+plot.o
+solver.mod
+solver.o
+fem1d.o
+plot.gnu

@@ -97,7 +97,11 @@ program fem_galerkin
   cb1%nodo=int(nodos(1,1))
   cb2%nodo=int(nodos(nnodos,1))
 
-  temp(nnodos,1)=0.
+  temp(nnodos,1)=0
+  !do i=1,nnodos
+  !  temp(i,1)=1-(nodos(i,2)-1)**2
+  !end do
+
   if (cb1%bctype=='dir') then
     temp(cb1%nodo,1)=cb1%pv
     ncb=ncb+1
@@ -173,7 +177,7 @@ program fem_galerkin
     end do
   close(20)
   print*, total_steps
-  if (total_steps<1000) then
+  if (total_steps<=1001) then
     call gnuplot(total_steps)
   end if
 !-----------------------------------------------------------------------------
