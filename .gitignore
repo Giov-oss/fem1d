@@ -16,3 +16,4 @@ obj/ecenergia.mod
 obj/data.o
 obj/data.mod
 fem1d.ps1
+plot.gnu
