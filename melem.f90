@@ -12,8 +12,8 @@ module elemental
         if (supg==0) then
           alpha=0.
         else
-          !alpha=1/tanh(pe)-1/pe
-          alpha=1.
+          alpha=1./tanh(pe)-1./pe
+          !alpha=1.
         end if
         do j=1,2
           do i=1,2

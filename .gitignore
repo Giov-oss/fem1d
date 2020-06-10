@@ -17,3 +17,6 @@ obj/data.o
 obj/data.mod
 fem1d.ps1
 plot.gnu
+plot.gnu
+data/resf.dat
+Untitled.m

@@ -97,9 +97,9 @@ program fem_galerkin
   cb1%nodo=int(nodos(1,1))
   cb2%nodo=int(nodos(nnodos,1))
 
-  temp(nnodos,1)=0
+  temp(:,1)=0.
   !do i=1,nnodos
-  !  temp(i,1)=1-(nodos(i,2)-1)**2
+  !  temp(i,1)=nodos(i,2)
   !end do
 
   if (cb1%bctype=='dir') then
@@ -180,6 +180,11 @@ program fem_galerkin
   if (total_steps<=1001) then
     call gnuplot(total_steps)
   end if
+  open(21,file='data/resf.dat',status='unknown',action='write',position='append')
+    do i=1,nnodos
+      write(21,*)temp(i,total_steps)
+    end do
+  close(21)
 !-----------------------------------------------------------------------------
 !-------------------------------------------------------------fin del programa
  deallocate (nodos)
